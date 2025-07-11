@@ -30,11 +30,11 @@ export type PageProps = {
 
 export async function generateMetadata({
   params,
-}: PageProps): Promise<Metadata> {
+}: any): Promise<any> {
   const slug = params.slug;
   const title = slug
     .replace(/-/g, " ")
-    .replace(/\b\w/g, (c) => c.toUpperCase());
+    .replace(/\b\w/g, (c: any) => c.toUpperCase());
 
   return {
     title: title + " - Beyaz Eşya Servisi",
