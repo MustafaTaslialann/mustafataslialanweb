@@ -1,18 +1,7 @@
 import { notFound } from "next/navigation";
 
-function slugify(text: string) {
-  return text
-    .toLowerCase()
-    .replace(/ı/g, "i")
-    .replace(/ş/g, "s")
-    .replace(/ç/g, "c")
-    .replace(/ö/g, "o")
-    .replace(/ü/g, "u")
-    .replace(/ğ/g, "g")
-    .replace(/\s+/g, "-");
-}
 
-const hizmetler = {
+const hizmetler: Record<string, string> = {
   "beyaz-esya-servisi": "Beyaz Eşya Servisi hakkında detaylı bilgi almak için bize ulaşın.",
   "buzdolabi": "Buzdolabı servisi için profesyonel destek almak için bize ulaşın .",
   "camasir-makinesi": "Çamaşır makinesi tamir, bakım ve servis hizmeti almak  için bize ulaşın.",
@@ -23,13 +12,24 @@ const hizmetler = {
   "televizyon": "Televizyon arızaları için uzman teknik servis almak için bize ulaşın ."
 };
 
-export default function HizmetSayfasi({ params }: { params: { slug: string } }) {
+export async function generateStaticParams(): Promise<{ slug: string }[]> {
+  return Object.keys(hizmetler).map((slug) => ({ slug }));
+}
+
+export type PageProps = {
+  params: {
+    slug: string;
+  };
+};
+
+export default async function HizmetSayfasi({ params }: any) {
   const { slug } = params;
-  const aciklama = hizmetler[slug];
+  const aciklama = hizmetler[slug as keyof typeof hizmetler];
 
   if (!aciklama) {
     notFound();
   }
+
 
   return (
     <main className="p-8 max-w-3xl mx-auto bg-[#0A1D56] rounded-lg shadow-md">
@@ -42,11 +42,12 @@ export default function HizmetSayfasi({ params }: { params: { slug: string } }) 
       <p className="text-sm text-yellow-300 text-center mt-12">
         Bu web sitesi özel teknik servis hizmeti sunar. Yetkili servis değildir. Sadece garantisi olmayan cihazlara hizmet verilmektedir.
       </p>
-     
-       <MusteriYorumlari />
+
+      <MusteriYorumlari />
     </main>
   );
 }
+
 function MusteriYorumlari() {
   const yorumlar = [
     { ad: "Ali Y.", yorum: "Çok hızlı ve güvenilir hizmet, memnun kaldım.", puan: 5 },
@@ -68,6 +69,8 @@ function MusteriYorumlari() {
     { ad: "Melis L.", yorum: "Her şey yolundaydı, teşekkürler.", puan: 5 },
     { ad: "Onur İ.", yorum: "Çözüm odaklı ekip, memnun kaldım.", puan: 4 },
   ];
+
+
 
   return (
     <section className="bg-[#FFD700] text-[#0A1D56] px-4 py-8">
