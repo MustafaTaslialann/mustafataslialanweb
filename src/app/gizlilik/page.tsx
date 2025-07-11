@@ -1,4 +1,10 @@
+import { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: 'Gizlilik Politikası',
+  description: 'Gizlilik Politikası'
+}
 
 export default function Gizlilik() {
   return (
