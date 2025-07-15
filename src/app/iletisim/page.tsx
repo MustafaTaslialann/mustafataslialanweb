@@ -8,21 +8,19 @@ export const metadata: Metadata = {
 
 export default function Iletisim() {
   return (
-    <main className="flex flex-col min-h-screen p-6 bg-[#0A1D56] text-yellow-400">
-      <h1 className="text-3xl font-bold mb-4 text-yellow-300">İletişim</h1>
-      <p className="mb-4 text-yellow-200">
+    <main className="flex flex-col min-h-screen p-6 bg-gray-900 text-gray-100">
+      <h1 className="text-3xl font-bold mb-4 text-gray-100">İletişim</h1>
+      <p className="mb-4 text-gray-100">
         Mustafa Taşlıalan :05065019612
         <br />
         Silifke/Mersin
       </p>
-      <p className="text-yellow-200">
+      <p className="text-gray-100">
         Müşteri memnuniyeti önceliğimizdir.
       </p>
-      <p className="text-sm text-yellow-300 mt-6 text-center">
-        Bu web sitesi özel teknik servis hizmeti sunar. Yetkili servis değildir. Sadece garantisi olmayan cihazlara hizmet verilmektedir.
-      </p>
+    
 
-      <Link href="/" className="mt-6 text-yellow-300 underline hover:text-yellow-400 w-max">
+      <Link href="/" className="mt-6 text-white-200 underline hover:text-yellow-200 w-max">
         Ana Sayfaya Dön
       </Link>
        <MusteriYorumlari />
@@ -55,7 +53,7 @@ function MusteriYorumlari() {
   ];
 
   return (
-    <section className="bg-[#FFD700] text-[#0A1D56] px-4 py-8">
+    <section className="bg-white-200 text-gray-400 px-4 py-8">
       <h2 className="text-2xl font-bold text-center mb-6">Müşteri Yorumları</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
         {yorumlar.map((item, index) => (

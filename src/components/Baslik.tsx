@@ -35,7 +35,7 @@ export default function Baslik() {
   ];
 
   return (
-    <header className="flex flex-col md:flex-row justify-between items-center px-6 py-4 bg-[#FFD700] shadow-md text-[#0A1D56]">
+    <header className="flex flex-col md:flex-row justify-between items-center px-6 py-4 bg-gray-900 shadow-md text-[#e8eceb]">
       <div className="mb-2 md:mb-0">
         <Link href="/" className="text-2xl font-bold tracking-wide">
           Beyaz Eşya Servis Hizmetleri
@@ -68,8 +68,7 @@ export default function Baslik() {
         </div>
         <Link href="/hakkimizda">Hakkımızda</Link>
         <Link href="/iletisim">İletişim</Link>
-        <Link href="/gizlilik">Gizlilik Politikası</Link>
-        <Link href="/kvkk">KVKK</Link>
+      
       </nav>
     </header>
   );

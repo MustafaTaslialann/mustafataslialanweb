@@ -52,11 +52,11 @@ export default async function HizmetSayfasi({ params }: any) {
   }
 
   return (
-    <main className="p-8 max-w-3xl mx-auto lg:max-w-full bg-[#0A1D56] rounded-lg shadow-md">
-      <h1 className="text-4xl font-bold mb-4 capitalize text-yellow-400">
+    <main className="p-8 max-w-3xl mx-auto lg:max-w-full bg-gray-900 rounded-lg shadow-md">
+      <h1 className="text-4xl font-bold mb-4 capitalize text-gray-200">
         {slug.replace(/-/g, " ")}
       </h1>
-      <p className="text-lg lg:text-2xl text-yellow-200 mb-8">{aciklama}</p>
+      <p className="text-lg lg:text-2xl text-gray-100 mb-8">{aciklama}</p>
 
       {/* ⚠️ Uyarı mesajı */}
       <p className="text-lg text-yellow-300 text-center mt-12">
@@ -116,19 +116,15 @@ function MusteriYorumlari() {
   ];
 
   return (
-    <section className="bg-[#FFD700] text-[#0A1D56] px-4 py-8">
+   <section className="bg-white-200 text-gray-400 px-4 py-8">
       <h2 className="text-2xl font-bold text-center mb-6">Müşteri Yorumları</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
         {yorumlar.map((item, index) => (
-          <div
-            key={index}
-            className="bg-white text-[#0A1D56] p-4 rounded shadow"
-          >
+          <div key={index} className="bg-white text-[#0A1D56] p-4 rounded shadow">
             <h3 className="font-semibold text-lg">{item.ad}</h3>
             <p className="italic mb-2">"{item.yorum}"</p>
             <div className="text-sm text-yellow-500">
-              {"★".repeat(item.puan)}
-              {"☆".repeat(5 - item.puan)}
+              {"★".repeat(item.puan)}{"☆".repeat(5 - item.puan)}
             </div>
           </div>
         ))}

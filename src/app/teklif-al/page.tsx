@@ -82,7 +82,7 @@ function MusteriYorumlari() {
   ];
 
   return (
-    <section className="bg-[#FFD700] text-[#0A1D56] px-4 py-8">
+     <section className="bg-gray-200 text-gray-400 px-4 py-8">
       <h2 className="text-2xl font-bold text-center mb-6">Müşteri Yorumları</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
         {yorumlar.map((item, index) => (
