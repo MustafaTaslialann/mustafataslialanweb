@@ -18,6 +18,7 @@ const hizmetler: Record<string, string> = {
     "Televizyonunuzda görüntü, ses, açılmama veya diğer elektronik arızalar yaşandığında, uzman ve güvenilir televizyon servisi olarak hızlı ve etkili çözümler sunuyoruz; deneyimli teknisyenlerimiz orijinal yedek parçalar kullanarak tamir, bakım ve montaj hizmetleri verir, cihazınızın performansını artırır ve ömrünü uzatır; uygun fiyat avantajı ve müşteri memnuniyeti odaklı hizmet anlayışımızla, evinizde kaliteli ve kesintisiz televizyon keyfi sağlamaya devam ediyoruz.",
 };
 
+
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
   return Object.keys(hizmetler).map((slug) => ({ slug }));
 }

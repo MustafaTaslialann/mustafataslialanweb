@@ -26,7 +26,10 @@ export default function Iletisim() {
         Ana Sayfaya Dön
       </Link>
        <MusteriYorumlari />
+      
+    
     </main>
+   
   );
 }
 function MusteriYorumlari() {
