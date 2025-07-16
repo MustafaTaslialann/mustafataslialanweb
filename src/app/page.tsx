@@ -14,34 +14,25 @@ export default function Anasayfa() {
           Beyaz Eşya Servisi
         </h1>
         <p className="text-lg md:text-xl mb-6">
-          Beyaz Eşya Servisi, günlük hayatın vazgeçilmez bir parçası olarak,
-          evlerimizdeki konforu artırır. Beyaz eşyalar, hayatı kolaylaştıran
-          önemli cihazlardır; bu nedenle, düzenli bakımları ve gerektiğinde
-          tamirleri büyük önem taşır. Beyaz Eşya Tamiri hizmeti sunan
-          profesyoneller, arızaların hızlı bir şekilde giderilmesi konusunda
-          uzmanlaşmıştır. Aynı zamanda, klima servisi sağlayan ekipler, yazın
-          serinliği ve kışın ısınmayı sağlamaktadır. Bu hizmetler, evdeki hava
-          kalitesini artırarak, yaşam alanlarını daha konforlu hale getirir.
-          Buzdolabı tamircisi, buzdolabının sorunsuz çalışmasını sağlarken,
-          çamaşır makinesi servisi de giysilerin temizlenmesini garanti eder.
-          Elektronik ev aletleri servisi, farklı cihazların bakımını ve
-          onarımını üstlenir. Bu cihazların düzgün çalışması, ev işlerinin
-          aksamasını önler ve günlük yaşamı kolaylaştırır. Fakat, zamanla
-          buzdolabı ya da çamaşır makineleri gibi beyaz eşyalar arızalanabilir.
-          Bu tür durumlarda, güvenilir bir beyaz eşya servis hizmetine
-          başvurmak, sorunların hızlıca çözülmesini sağlar. Bu nedenle, bu
-          hizmetlere ihtiyaç duymak, hem zaman tasarrufu sağlar hem de evdeki
-          düzeni korur. Garantisi olmayan cihazlar için profesyonel bakım,
-          onarım ve tamir hizmetleri. 
-          Hemen ara butonuna tıklayarak bize
-          ulaşabilirsiniz.
+          Beyaz Eşya Servis ve tamir hizmetimizle arızalarınızın hızlı bir
+          şekilde çözülmesini sağlıyoruz Garantisi olmayan cihazlar için
+          profesyonel bakım, onarım ve tamir hizmetleri. Hemen ara'ya tıklayarak
+          bize ulaşıp randevu oluşturabilirsiniz,Veya Şimdi ara'ya tıklayarak
+          müşteri hizmetlerimize bağlanabilirsiniz
         </p>
         <Link
           href="/teklif-al"
           className="bg-[#FFD700] hover:bg-[#FFC107] text-[#0A1D56] font-semibold px-6 py-3 rounded-lg inline-block text-base md:text-lg transition"
         >
-          Hemen Ara
+          Hemen Randevu Al
         </Link>
+
+        <a
+          href="tel:+905065019612"
+          className="bg-[#FFD700] hover:bg-[#FFC107] text-[#0A1D56] font-semibold px-6 py-3 rounded-lg inline-block text-base md:text-lg transition mt-4"
+        >
+          Şimdi Ara
+        </a>
       </section>
       <MusteriYorumlari />
     </main>
@@ -99,11 +90,15 @@ function MusteriYorumlari() {
       <h2 className="text-2xl font-bold text-center mb-6">Müşteri Yorumları</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
         {yorumlar.map((item, index) => (
-          <div key={index} className="bg-white text-[#0A1D56] p-4 rounded shadow">
+          <div
+            key={index}
+            className="bg-white text-[#0A1D56] p-4 rounded shadow"
+          >
             <h3 className="font-semibold text-lg">{item.ad}</h3>
             <p className="italic mb-2">"{item.yorum}"</p>
             <div className="text-sm text-yellow-500">
-              {"★".repeat(item.puan)}{"☆".repeat(5 - item.puan)}
+              {"★".repeat(item.puan)}
+              {"☆".repeat(5 - item.puan)}
             </div>
           </div>
         ))}
