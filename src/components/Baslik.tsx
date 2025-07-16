@@ -23,6 +23,7 @@ export default function Baslik() {
       .replace(/\s+/g, "-");
   }
 
+  
   const services = [
     "Beyaz Eşya Servisi",
     "Buzdolabı",
@@ -41,34 +42,54 @@ export default function Baslik() {
           Beyaz Eşya Servis Hizmetleri
         </Link>
       </div>
-      <nav className="flex flex-wrap gap-4 justify-center text-base font-medium">
+
+      <nav className="flex flex-wrap gap-4 justify-center text-base font-medium relative">
         <Link href="/">Ana Sayfa</Link>
-        <div className="relative group">
-          <div className="flex items-center gap-1 hover:cursor-pointer" onClick={handleShowDropdown}>
-            <button className="focus:outline-none hover:cursor-pointer">Hizmetlerimiz</button>
+
+        <div className="relative">
+          <div
+            className="flex items-center gap-1 hover:cursor-pointer"
+            onClick={handleShowDropdown}
+          >
+            <button className="focus:outline-none">Menü</button>
             <IoIosArrowDropdown />
           </div>
 
           {showDropdown && (
-            <div className="absolute bg-white shadow-lg rounded p-2 z-10 min-w-[200px]">
-              {services.map((service) => {
-                const slug = slugify(service);
-                return (
-                  <Link
-                    key={service}
-                    href={`/hizmetler/${slug}`}
-                    className="block px-3 py-2 hover:bg-[#FFC107] text-[#0A1D56] rounded"
-                  >
-                    {service}
-                  </Link>
-                );
-              })}
+            <div className="absolute right-0 bg-white shadow-lg rounded p-2 z-10 min-w-[200px] text-[#0A1D56]">
+              <div className="border-b mb-2 pb-2">
+                <span className="block px-3 py-1 text-sm font-semibold text-gray-700">
+                  Hizmetlerimiz
+                </span>
+                {services.map((service) => {
+                  const slug = slugify(service);
+                  return (
+                    <Link
+                      key={service}
+                      href={`/hizmetler/${slug}`}
+                      className="block px-3 py-1 hover:bg-[#FFC107] rounded"
+                    >
+                      {service}
+                    </Link>
+                  );
+                })}
+              </div>
+
+              <Link
+                href="/hakkimizda"
+                className="block px-3 py-2 hover:bg-[#FFC107] rounded"
+              >
+                Hakkımızda
+              </Link>
+              <Link
+                href="/iletisim"
+                className="block px-3 py-2 hover:bg-[#FFC107] rounded"
+              >
+                İletişim
+              </Link>
             </div>
           )}
         </div>
-        <Link href="/hakkimizda">Hakkımızda</Link>
-        <Link href="/iletisim">İletişim</Link>
-      
       </nav>
     </header>
   );

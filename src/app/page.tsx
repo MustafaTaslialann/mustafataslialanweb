@@ -95,19 +95,15 @@ function MusteriYorumlari() {
   ];
 
   return (
-    <section className="bg-gray-200 text-gray-400 px-4 py-8">
+    <section className="bg-white-200 text-gray-400 px-4 py-8">
       <h2 className="text-2xl font-bold text-center mb-6">Müşteri Yorumları</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
         {yorumlar.map((item, index) => (
-          <div
-            key={index}
-            className="bg-white text-[#0A1D56] p-4 rounded shadow"
-          >
+          <div key={index} className="bg-white text-[#0A1D56] p-4 rounded shadow">
             <h3 className="font-semibold text-lg">{item.ad}</h3>
             <p className="italic mb-2">"{item.yorum}"</p>
             <div className="text-sm text-yellow-500">
-              {"★".repeat(item.puan)}
-              {"☆".repeat(5 - item.puan)}
+              {"★".repeat(item.puan)}{"☆".repeat(5 - item.puan)}
             </div>
           </div>
         ))}

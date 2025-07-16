@@ -10,13 +10,24 @@ const hizmetler: Record<string, string> = {
     "Çamaşır makinenizde dönmeme, su almama, program hata kodları veya su boşaltmama gibi sorunlar yaşadığınızda, profesyonel ve güvenilir bir çamaşır makinesi servisi ile hızlı çözümler sunuyoruz; deneyimli teknisyenlerimiz orijinal yedek parçalarla tamir ve bakım işlemlerini gerçekleştirirken, cihazınızın performansını artırır ve ömrünü uzatır; uygun fiyat garantisi ve müşteri memnuniyeti odaklı hizmet anlayışımızla, evinizde kesintisiz konfor sağlamak için yanınızdayız.",
   "bulasik-makinesi":
     "Bulaşık makineniz yıkama sorunları, su boşaltmama veya filtre tıkanıklığı gibi problemlerle karşılaştığında, uzman ve güvenilir bulaşık makinesi servisi sayesinde hızlı ve etkili çözümler sunuyoruz; deneyimli teknisyenlerimiz orijinal yedek parçalar kullanarak tamir ve bakım işlemlerini yapar, cihazınızın performansını artırır ve ömrünü uzatır; uygun fiyat politikamız ve müşteri memnuniyetine verdiğimiz önemle, bulaşık makinenizin kesintisiz ve verimli çalışmasını sağlıyoruz.",
-  firin: "Fırınınızın ısınmama, pişirme sorunları veya elektronik panel arızaları gibi problemlerinde uzman ve güvenilir fırın servisi olarak hızlı ve etkili çözümler sunuyoruz; deneyimli teknisyenlerimiz orijinal yedek parçalarla tamir ve bakım işlemlerini gerçekleştirerek cihazınızın performansını artırır ve ömrünü uzatır; ekonomik fiyat avantajı ve müşteri memnuniyeti odaklı hizmet anlayışımızla, mutfağınızda kesintisiz konfor sağlamaya devam ediyoruz.",
-  klima: "Klimalarınızın soğutma yetersizliği, gaz dolumu, filtre temizliği ve bakım ihtiyaçlarında uzman ve güvenilir klima servisi olarak hızlı ve etkili çözümler sunuyoruz; deneyimli teknisyenlerimiz orijinal yedek parçalar kullanarak tamir ve bakım hizmeti verir, cihazınızın performansını artırır ve enerji verimliliğini optimize eder; uygun fiyat politikamız ve müşteri memnuniyetine verdiğimiz önemle, evinizde veya iş yerinizde konforunuzu kesintisiz hale getiriyoruz.",
-  
+  firin:
+    "Fırınınızın ısınmama, pişirme sorunları veya elektronik panel arızaları gibi problemlerinde uzman ve güvenilir fırın servisi olarak hızlı ve etkili çözümler sunuyoruz; deneyimli teknisyenlerimiz orijinal yedek parçalarla tamir ve bakım işlemlerini gerçekleştirerek cihazınızın performansını artırır ve ömrünü uzatır; ekonomik fiyat avantajı ve müşteri memnuniyeti odaklı hizmet anlayışımızla, mutfağınızda kesintisiz konfor sağlamaya devam ediyoruz.",
+  klima:
+    "Klimalarınızın soğutma yetersizliği, gaz dolumu, filtre temizliği ve bakım ihtiyaçlarında uzman ve güvenilir klima servisi olarak hızlı ve etkili çözümler sunuyoruz; deneyimli teknisyenlerimiz orijinal yedek parçalar kullanarak tamir ve bakım hizmeti verir, cihazınızın performansını artırır ve enerji verimliliğini optimize eder; uygun fiyat politikamız ve müşteri memnuniyetine verdiğimiz önemle, evinizde veya iş yerinizde konforunuzu kesintisiz hale getiriyoruz.",
   kombi:
     "Kombinizde yaşanan ısınma sorunları, su sızıntıları veya arıza durumlarında güvenilir ve uzman kombi servisi olarak hızlı ve etkili çözümler sunuyoruz; deneyimli teknisyenlerimiz orijinal yedek parçalar kullanarak bakım, tamir ve montaj hizmetleri verir, kombinizin performansını artırır ve enerji tasarrufu sağlar; uygun fiyat garantisi ve müşteri memnuniyetine verdiğimiz önemle, evinizin sıcaklığını kesintisiz ve konforlu hale getiriyoruz.",
   televizyon:
     "Televizyonunuzda görüntü, ses, açılmama veya diğer elektronik arızalar yaşandığında, uzman ve güvenilir televizyon servisi olarak hızlı ve etkili çözümler sunuyoruz; deneyimli teknisyenlerimiz orijinal yedek parçalar kullanarak tamir, bakım ve montaj hizmetleri verir, cihazınızın performansını artırır ve ömrünü uzatır; uygun fiyat avantajı ve müşteri memnuniyeti odaklı hizmet anlayışımızla, evinizde kaliteli ve kesintisiz televizyon keyfi sağlamaya devam ediyoruz.",
+};
+const hizmetBasliklari: Record<string, string> = {
+  "beyaz-esya-servisi": "Beyaz Eşya Servisi",
+  buzdolabi: "Buzdolabı",
+  "camasir-makinesi": "Çamaşır Makinesi",
+  "bulasik-makinesi": "Bulaşık Makinesi",
+  firin: "Fırın",
+  klima: "Klima",
+  kombi: "Kombi",
+  televizyon: "Televizyon",
 };
 
 
@@ -30,16 +41,14 @@ export type PageProps = {
   };
 };
 
-export async function generateMetadata({
-  params,
-}: any): Promise<any> {
+export async function generateMetadata({ params }: any): Promise<any> {
   const slug = params.slug;
-  const title = slug
-    .replace(/-/g, " ")
-    .replace(/\b\w/g, (c: any) => c.toUpperCase());
+ const title = (hizmetBasliklari[slug] ?? slug.replace(/-/g, " "))
+  .replace(/\b\w/g, (c: any) => c.toUpperCase());
+    
 
   return {
-    title: title + " - Beyaz Eşya Servisi",
+    title: `${title} - Beyaz Eşya Servisi`,
     description: hizmetler[slug] ?? "Detaylı bilgi için bize ulaşın.",
   };
 }
@@ -54,9 +63,9 @@ export default async function HizmetSayfasi({ params }: any) {
 
   return (
     <main className="p-8 max-w-3xl mx-auto lg:max-w-full bg-gray-900 rounded-lg shadow-md">
-      <h1 className="text-4xl font-bold mb-4 capitalize text-gray-200">
-        {slug.replace(/-/g, " ")}
-      </h1>
+     <h1 className="text-4xl font-bold mb-4 capitalize text-gray-200">
+  {hizmetBasliklari[slug] ?? "Hizmet Detayı"}
+</h1>
       <p className="text-lg lg:text-2xl text-gray-100 mb-8">{aciklama}</p>
 
       {/* ⚠️ Uyarı mesajı */}
@@ -117,15 +126,19 @@ function MusteriYorumlari() {
   ];
 
   return (
-   <section className="bg-white-200 text-gray-400 px-4 py-8">
+    <section className="bg-white-200 text-gray-400 px-4 py-8">
       <h2 className="text-2xl font-bold text-center mb-6">Müşteri Yorumları</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
         {yorumlar.map((item, index) => (
-          <div key={index} className="bg-white text-[#0A1D56] p-4 rounded shadow">
+          <div
+            key={index}
+            className="bg-white text-[#0A1D56] p-4 rounded shadow"
+          >
             <h3 className="font-semibold text-lg">{item.ad}</h3>
             <p className="italic mb-2">"{item.yorum}"</p>
             <div className="text-sm text-yellow-500">
-              {"★".repeat(item.puan)}{"☆".repeat(5 - item.puan)}
+              {"★".repeat(item.puan)}
+              {"☆".repeat(5 - item.puan)}
             </div>
           </div>
         ))}
