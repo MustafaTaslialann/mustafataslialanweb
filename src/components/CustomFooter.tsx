@@ -48,7 +48,11 @@ const CustomFooter = () => {
         Bu web sitesi özel teknik servis hizmeti sunar. Yetkili servis değildir.
         Sadece garantisi olmayan cihazlara hizmet verilmektedir.
       </p>
+      <p className="text-sm text-center text-gray-400 mt-2">
+        © 2025 beyazesyaapp. Tüm hakları saklıdır.
+      </p>
     </footer>
+    
   );
 };
 

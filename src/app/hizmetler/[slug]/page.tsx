@@ -5,11 +5,11 @@ const hizmetler: Record<string, string> = {
   "beyaz-esya-servisi":
     "Beyaz eşyalar, evimizin en önemli yardımcılarıdır. Buzdolabı, çamaşır makinesi, bulaşık makinesi, fırın ve klima gibi cihazlar hayatımızı kolaylaştırırken, zamanla arızalanabilir veya bakım gerektirebilir. İşte tam bu noktada beyaz eşya servisi devreye girer. Peki, beyaz eşya servisi neden önemlidir ve doğru teknik servis nasıl seçilir? Bu makalede tüm detaylarıyla ele alıyoruz. Beyaz eşya servisi, evinizde kullandığınız beyaz eşyaların tamir, bakım ve montaj işlemlerini yapan uzman ekiplerin sunduğu teknik hizmettir. Bu servisler, cihazların arızalanması durumunda hızlı müdahale ederek cihazların ömrünü uzatır ve tekrar sorunsuz çalışmasını sağlar.",
   buzdolabi:
-    "Buzdolabınızın soğutma problemleri, sesli çalışma, su sızıntısı veya elektrik arızaları gibi sorunlarında uzman ve güvenilir bir buzdolabı servisi ile hızlı ve profesyonel destek alabilirsiniz; alanında deneyimli teknisyenlerimiz orijinal yedek parçalar kullanarak cihazınızın performansını en üst seviyeye çıkarır, periyodik bakım ve tamir hizmetleri ile buzdolabınızın ömrünü uzatır, ekonomik ve şeffaf fiyat politikamızla müşteri memnuniyetini ön planda tutarız; bu sayede hem evinizin konforu bozulmaz hem de olası arızaların önüne geçerek uzun vadede tasarruf sağlarsınız.",
+    "Buzdolabınızın soğutma problemleri, sesli çalışma, su sızıntısı veya elektrik arızaları gibi sorunlarında uzman ve güvenilir bir buzdolabı servisi ile hızlı ve profesyonel destek alabilirsiniz; alanında deneyimli teknisyenlerimiz orijinal yedek parçalar kullanarak cihazınızın performansını en üst seviyeye çıkarır, periyodik bakım ve tamir hizmetleri ile buzdolabınızın ömrünü uzatır, ekonomik ve şeffaf fiyat politikamızla müşteri memnuniyetini ön planda tutarız; bu sayede hem evinizin konforu bozulmaz hem de olası arızaların önüne geçerek uzun vadede tasarruf sağlarsınız.Yeni buzdolabı alırken kapasiteye dikkat etmelisin. Enerji verimliliği uzun vadede bütçene katkı sağlar. Tasarım, mutfak dekorasyonunla uyumlu olmalıdır. Soğutma sistemi performansı etkiler, no-frost özellik donma sorununu önler. Ses düzeyi de önemli, sessiz modeller huzurunu korur. Ancak, enerji sınıfı tasarruf için önemlidir. Kapasite gıda depolama ihtiyacını karşılamalıdır. Mutfakta uyumlu görünüm için tasarım önemlidir. Mümkün olduğunca sessiz model seçmelisin. Dolayısıyla, buzdolabının avantajlarını değerlendirmelisin. Unutma, enerji verimli modeller ön plandadır. Fakat, doğru seçim bütçeni ve deneyimini etkiler.",
   "camasir-makinesi":
     "Çamaşır makinenizde dönmeme, su almama, program hata kodları veya su boşaltmama gibi sorunlar yaşadığınızda, profesyonel ve güvenilir bir çamaşır makinesi servisi ile hızlı çözümler sunuyoruz; deneyimli teknisyenlerimiz orijinal yedek parçalarla tamir ve bakım işlemlerini gerçekleştirirken, cihazınızın performansını artırır ve ömrünü uzatır; uygun fiyat garantisi ve müşteri memnuniyeti odaklı hizmet anlayışımızla, evinizde kesintisiz konfor sağlamak için yanınızdayız.",
   "bulasik-makinesi":
-    "Bulaşık makineniz yıkama sorunları, su boşaltmama veya filtre tıkanıklığı gibi problemlerle karşılaştığında, uzman ve güvenilir bulaşık makinesi servisi sayesinde hızlı ve etkili çözümler sunuyoruz; deneyimli teknisyenlerimiz orijinal yedek parçalar kullanarak tamir ve bakım işlemlerini yapar, cihazınızın performansını artırır ve ömrünü uzatır; uygun fiyat politikamız ve müşteri memnuniyetine verdiğimiz önemle, bulaşık makinenizin kesintisiz ve verimli çalışmasını sağlıyoruz.",
+    "Bulaşık makineniz yıkama sorunları, su boşaltmama veya filtre tıkanıklığı gibi problemlerle karşılaştığında, uzman ve güvenilir bulaşık makinesi servisi sayesinde hızlı ve etkili çözümler sunuyoruz; deneyimli teknisyenlerimiz orijinal yedek parçalar kullanarak tamir ve bakım işlemlerini yapar, cihazınızın performansını artırır ve ömrünü uzatır; uygun fiyat politikamız ve müşteri memnuniyetine verdiğimiz önemle, bulaşık makinenizin kesintisiz ve verimli çalışmasını sağlıyoruz.Bulaşık makinesi satın alırken dikkat etmen gereken bazı önemli programlar bulunuyor. Bu programlar, makinenin verimliliğini ve kullanım kolaylığını etkiliyor. Öncelikle, enerji verimliliği yüksek bir bulaşık makinesi seçmen ihtiyaçlarını karşılar. Ek olarak, sessiz çalışma özelliği önemli bir faktördür. Gelişmiş modeller, ses seviyesini minimize ederek evde daha konforlu bir ortam oluşturur. Mutfak aletlerin arasında beyaz eşya olarak en çok tercih edilenlerden biri bulaşık makineleridir. Ayrıca, su tasarrufu sağlayan programlar da günümüzde oldukça popüler. Bu sayede hem doğayı korur hem de su faturalarında tasarruf sağlarsın. Sonuç olarak, ihtiyacını karşılayacak ve bütçene uygun bir model bulmak için bu unsurlara dikkat etmelisin. ",
   firin:
     "Fırınınızın ısınmama, pişirme sorunları veya elektronik panel arızaları gibi problemlerinde uzman ve güvenilir fırın servisi olarak hızlı ve etkili çözümler sunuyoruz; deneyimli teknisyenlerimiz orijinal yedek parçalarla tamir ve bakım işlemlerini gerçekleştirerek cihazınızın performansını artırır ve ömrünü uzatır; ekonomik fiyat avantajı ve müşteri memnuniyeti odaklı hizmet anlayışımızla, mutfağınızda kesintisiz konfor sağlamaya devam ediyoruz.",
   klima:
@@ -30,7 +30,6 @@ const hizmetBasliklari: Record<string, string> = {
   televizyon: "Televizyon",
 };
 
-
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
   return Object.keys(hizmetler).map((slug) => ({ slug }));
 }
@@ -43,9 +42,10 @@ export type PageProps = {
 
 export async function generateMetadata({ params }: any): Promise<any> {
   const slug = params.slug;
- const title = (hizmetBasliklari[slug] ?? slug.replace(/-/g, " "))
-  .replace(/\b\w/g, (c: any) => c.toUpperCase());
-    
+  const title = (hizmetBasliklari[slug] ?? slug.replace(/-/g, " ")).replace(
+    /\b\w/g,
+    (c: any) => c.toUpperCase()
+  );
 
   return {
     title: `${title} - Beyaz Eşya Servisi`,
@@ -63,9 +63,9 @@ export default async function HizmetSayfasi({ params }: any) {
 
   return (
     <main className="p-8 max-w-3xl mx-auto lg:max-w-full bg-gray-900 rounded-lg shadow-md">
-     <h1 className="text-4xl font-bold mb-4 capitalize text-gray-200">
-  {hizmetBasliklari[slug] ?? "Hizmet Detayı"}
-</h1>
+      <h1 className="text-4xl font-bold mb-4 capitalize text-gray-200">
+        {hizmetBasliklari[slug] ?? "Hizmet Detayı"}
+      </h1>
       <p className="text-lg lg:text-2xl text-gray-100 mb-8">{aciklama}</p>
 
       {/* ⚠️ Uyarı mesajı */}

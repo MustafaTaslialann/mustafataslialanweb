@@ -18,7 +18,14 @@ export default function Iletisim() {
       <p className="text-gray-100">
         Müşteri memnuniyeti önceliğimizdir.
       </p>
-    
+    <div className="flex justify-center mt-4">
+        <a
+          href="tel:+905065019612"
+          className="bg-[#FFD700] hover:bg-[#FFC107] text-[#0A1D56] font-semibold px-4 py-2 rounded-lg text-sm md:text-base transition"
+        >
+          Hemen Ara
+        </a>
+      </div>
 
       <Link href="/" className="mt-6 text-white-200 underline hover:text-yellow-200 w-max">
         Ana Sayfaya Dön

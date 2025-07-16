@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function Anasayfa() {
   return (
     <main className="flex flex-col min-h-screen bg-gray-900 text-gray-100">
-      <section className="hero p-8 text-center text-white-200">
+      <section className="flex flex-col items-center justify-center">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">
           Beyaz Eşya Servisi
         </h1>

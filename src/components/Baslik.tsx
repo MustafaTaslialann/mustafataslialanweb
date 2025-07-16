@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import Link from "next/link";
 import { useState } from "react";
@@ -23,7 +23,6 @@ export default function Baslik() {
       .replace(/\s+/g, "-");
   }
 
-  
   const services = [
     "Beyaz Eşya Servisi",
     "Buzdolabı",
@@ -34,17 +33,29 @@ export default function Baslik() {
     "Kombi",
     "Televizyon",
   ];
+  const hizmetBasliklari: Record<string, string> = {
+    "beyaz-esya-servisi": "Beyaz Eşya Servisi",
+    buzdolabi: "Buzdolabı",
+    "camasir-makinesi": "Çamaşır Makinesi",
+    "bulasik-makinesi": "Bulaşık Makinesi",
+    firin: "Fırın",
+    klima: "Klima",
+    kombi: "Kombi",
+    televizyon: "Televizyon",
+  };
 
   return (
     <header className="flex flex-col md:flex-row justify-between items-center px-6 py-4 bg-gray-900 shadow-md text-[#e8eceb]">
-      <div className="mb-2 md:mb-0">
-        <Link href="/" className="text-2xl font-bold tracking-wide">
+      <div className="mb-2 md:mb-0 text-center w-full md:w-auto ">
+        <Link href="/" className="text-2xl font-bold tracking-wide block">
           Beyaz Eşya Servis Hizmetleri
         </Link>
       </div>
 
       <nav className="flex flex-wrap gap-4 justify-center text-base font-medium relative">
-        <Link href="/">Ana Sayfa</Link>
+        <Link href="/" onClick={() => setShowDropdown(false)}>
+        Ana Sayfa</Link>
+        
 
         <div className="relative">
           <div
@@ -68,6 +79,7 @@ export default function Baslik() {
                       key={service}
                       href={`/hizmetler/${slug}`}
                       className="block px-3 py-1 hover:bg-[#FFC107] rounded"
+                      onClick={() => setShowDropdown(false)}
                     >
                       {service}
                     </Link>
@@ -78,12 +90,14 @@ export default function Baslik() {
               <Link
                 href="/hakkimizda"
                 className="block px-3 py-2 hover:bg-[#FFC107] rounded"
+                onClick={() => setShowDropdown(false)}
               >
                 Hakkımızda
               </Link>
               <Link
                 href="/iletisim"
                 className="block px-3 py-2 hover:bg-[#FFC107] rounded"
+                onClick={() => setShowDropdown(false)}
               >
                 İletişim
               </Link>
