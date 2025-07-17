@@ -34,7 +34,18 @@ export default function Anasayfa() {
           Şimdi Ara
         </a>
       </section>
+        <p className="text-lg md:text-xl mb-6">
+        Beyaz Eşya Servis Hizmetleri, evlerimizin vazgeçilmez parçaları olan
+        beyaz eşyaların bakımı ve onarımı konusunda uzmanlaşmış bir alandır. Bu
+        hizmetler, Beyaz Eşya Tamir Servisi aracılığıyla, arızalanan
+        buzdolapları, çamaşır makineleri ve diğer ev aletlerine yönelik hızlı
+        çözümler sunar. Aileler, günümüzde buzdolabı servisleri sayesinde gıda
+        güvenliğini sağlamakta ve çamaşır makinesi onarımı ile iş yüklerini
+        azaltmaktadır. Aynı zamanda, klima bakım ve montaj hizmetleri ile yaz
+        aylarında serin bir ortam oluşturmak için gereken desteği alır.
+      </p>
       <MusteriYorumlari />
+    
     </main>
   );
 }

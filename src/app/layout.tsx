@@ -4,6 +4,7 @@ import "./globals.css";
 import Baslik from "@/components/Baslik";
 import CustomFooter from "@/components/CustomFooter";
 
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],

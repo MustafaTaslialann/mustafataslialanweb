@@ -53,7 +53,7 @@ export async function generateMetadata({ params }: any): Promise<any> {
   };
 }
 
-export default async function HizmetSayfasi({ params }: any) {
+export default async function HizmetSayfasi({ params }: any ) {
   const { slug } = params;
   const aciklama = hizmetler[slug as keyof typeof hizmetler];
 

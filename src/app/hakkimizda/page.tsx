@@ -14,7 +14,7 @@ export default function Hakkimizda() {
         Beyaz Eşya Servisi olarak yıllardır garantisi olmayan cihazlarınıza
         profesyonel bakım ve onarım hizmeti sunmaktayız.
       </p>
-      <p className="mb-4 text-gray-200">
+      <p className="mb-6 text-gray-200">
         2025 yılında kurulan firmamız, beyaz eşya teknik servis alanında
         uzmanlaşmış, tamamen bağımsız ve özel bir servistir. Kuruluşumuzdan bu
         yana müşteri memnuniyetini ön planda tutarak, garantisi sona ermiş
