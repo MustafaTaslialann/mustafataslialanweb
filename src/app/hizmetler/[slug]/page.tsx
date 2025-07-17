@@ -43,12 +43,12 @@ export type PageProps = {
 
 export async function generateMetadata({
   params,
-}: PageProps): Promise<Metadata> {
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
   const slug = params.slug;
-  const title = (hizmetBasliklari[slug] ?? slug.replace(/-/g, " ")).replace(
-    /\b\w/g,
-    (c: any) => c.toUpperCase()
-  );
+  const title = (hizmetBasliklari[slug] ?? slug.replace(/-/g, " "))
+    .replace(/\b\w/g, (c) => c.toUpperCase());
 
   return {
     title: `${title} - Beyaz Eşya Servisi`,
