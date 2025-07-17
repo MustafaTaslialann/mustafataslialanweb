@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { notFound } from "next/navigation";
+
 
 const hizmetler: Record<string, string> = {
   "beyaz-esya-servisi":
@@ -27,36 +27,31 @@ const hizmetBasliklari: Record<string, string> = {
   firin: "Fırın",
   klima: "Klima",
   kombi: "Kombi",
-  televizyon: "Televizyon",  };
-  
-
-
-export async function generateStaticParams(): Promise<{ slug: string }[]> {
-  return Object.keys(hizmetler).map((slug) => ({ slug }));
-}
-
-export type PageProps = {
-  params: {
-    slug: string;
-  };
+  televizyon: "Televizyon",
 };
 
-export async function generateMetadata({
+export const dynamic = "force-dynamic";
+
+export function generateMetadata({
   params,
 }: {
   params: { slug: string };
-}): Promise<Metadata> {
+}): Metadata {
   const slug = params.slug;
-  const title = (hizmetBasliklari[slug] ?? slug.replace(/-/g, " "))
-    .replace(/\b\w/g, (c) => c.toUpperCase());
+
+  const isKnown = slug in hizmetBasliklari;
+
+  const baslik = isKnown
+    ? hizmetBasliklari[slug]
+    : slug.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
 
   return {
-    title: `${title} - Beyaz Eşya Servisi`,
-    description: hizmetler[slug] ?? "Detaylı bilgi için bize ulaşın.",
+    title: `${baslik} - Beyaz Eşya Servisi`,
+    description: hizmetler[slug] ?? `${baslik} hizmeti.`,
   };
 }
 
-export default async function HizmetSayfasi({ params }: PageProps) {
+export default async function HizmetSayfasi({ params }: { params: { slug: string } }) {
   const { slug } = params;
   const aciklama = hizmetler[slug as keyof typeof hizmetler];
 
