@@ -27,9 +27,8 @@ const hizmetBasliklari: Record<string, string> = {
   firin: "Fırın",
   klima: "Klima",
   kombi: "Kombi",
-  televizyon: "Televizyon",
-};
-
+  televizyon: "Televizyon",  };
+  
 
 
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
@@ -42,7 +41,9 @@ export type PageProps = {
   };
 };
 
-export async function generateMetadata({ params }: any): Promise<any> {
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
   const slug = params.slug;
   const title = (hizmetBasliklari[slug] ?? slug.replace(/-/g, " ")).replace(
     /\b\w/g,
@@ -59,22 +60,28 @@ export default async function HizmetSayfasi({ params }: PageProps) {
   const { slug } = params;
   const aciklama = hizmetler[slug as keyof typeof hizmetler];
 
- const baslik = hizmetBasliklari[slug]??
- slug.replace(/-/g,"").replace(/\b\w/g,(c) => c.toUpperCase());
+  const baslik =
+    hizmetBasliklari[slug] ??
+    slug.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
 
   return (
     <main className="p-8 max-w-3xl mx-auto lg:max-w-full bg-gray-900 rounded-lg shadow-md">
       <h1 className="text-4xl font-bold mb-4 capitalize text-gray-200">
         {baslik}
       </h1>
-      <p className="text-lg lg:text-2xl text-gray-100 mb-8">{aciklama}</p>
-
-      {/* ⚠️ Uyarı mesajı */}
+      <p className="text-lg lg:text-2xl text-gray-100 mb-8">
+        {aciklama ?? `"${baslik}" hizmeti.`}
+      </p>
       <p className="text-lg text-yellow-300 text-center mt-12">
         Bu web sitesi özel teknik servis hizmeti sunar. Yetkili servis değildir.
         Sadece garantisi olmayan cihazlara hizmet verilmektedir.
       </p>
-
+      <a
+        href="tel:+9050 65019612"
+        className="bg-[#FFD700] hover:bg-[#FFC107] text-[#0A1D56] font-semibold px-6 py-3 rounded-lg inline-block text-base md:text-lg transition mt-4"
+      >
+        Şimdi Ara
+      </a>
       <MusteriYorumlari />
     </main>
   );
