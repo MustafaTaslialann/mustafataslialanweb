@@ -30,6 +30,8 @@ const hizmetBasliklari: Record<string, string> = {
   televizyon: "Televizyon",
 };
 
+
+
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
   return Object.keys(hizmetler).map((slug) => ({ slug }));
 }
@@ -53,18 +55,17 @@ export async function generateMetadata({ params }: any): Promise<any> {
   };
 }
 
-export default async function HizmetSayfasi({ params }: any ) {
+export default async function HizmetSayfasi({ params }: PageProps) {
   const { slug } = params;
   const aciklama = hizmetler[slug as keyof typeof hizmetler];
 
-  if (!aciklama) {
-    notFound();
-  }
+ const baslik = hizmetBasliklari[slug]??
+ slug.replace(/-/g,"").replace(/\b\w/g,(c) => c.toUpperCase());
 
   return (
     <main className="p-8 max-w-3xl mx-auto lg:max-w-full bg-gray-900 rounded-lg shadow-md">
       <h1 className="text-4xl font-bold mb-4 capitalize text-gray-200">
-        {hizmetBasliklari[slug] ?? "Hizmet Detayı"}
+        {baslik}
       </h1>
       <p className="text-lg lg:text-2xl text-gray-100 mb-8">{aciklama}</p>
 
