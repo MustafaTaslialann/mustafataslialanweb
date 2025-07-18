@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 
-
 const hizmetler: Record<string, string> = {
   "beyaz-esya-servisi":
     "Beyaz eşyalar, evimizin en önemli yardımcılarıdır. Buzdolabı, çamaşır makinesi, bulaşık makinesi, fırın ve klima gibi cihazlar hayatımızı kolaylaştırırken, zamanla arızalanabilir veya bakım gerektirebilir. İşte tam bu noktada beyaz eşya servisi devreye girer. Peki, beyaz eşya servisi neden önemlidir ve doğru teknik servis nasıl seçilir? Bu makalede tüm detaylarıyla ele alıyoruz. Beyaz eşya servisi, evinizde kullandığınız beyaz eşyaların tamir, bakım ve montaj işlemlerini yapan uzman ekiplerin sunduğu teknik hizmettir. Bu servisler, cihazların arızalanması durumunda hızlı müdahale ederek cihazların ömrünü uzatır ve tekrar sorunsuz çalışmasını sağlar.",
@@ -32,32 +31,31 @@ const hizmetBasliklari: Record<string, string> = {
 
 export const dynamic = "force-dynamic";
 
-export function generateMetadata({
-  params,
-}: {
-  params: { slug: string };
-}): Metadata {
+export async function generateMetadata(
+  { params }: { params: { slug: string } }
+): Promise<Metadata> {
   const slug = params.slug;
-
-  const isKnown = slug in hizmetBasliklari;
-
-  const baslik = isKnown
-    ? hizmetBasliklari[slug]
-    : slug.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+  const title = (hizmetBasliklari[slug] ?? slug.replace(/-/g, " ")).replace(
+    /\b\w/g,
+    (c) => c.toUpperCase()
+  );
 
   return {
-    title: `${baslik} - Beyaz Eşya Servisi`,
-    description: hizmetler[slug] ?? `${baslik} hizmeti.`,
+    title: `${title} - Beyaz Eşya Servisi`,
+    description: hizmetler[slug] ?? "Detaylı bilgi için bize ulaşın.",
   };
 }
 
-export default async function HizmetSayfasi({ params }: { params: { slug: string } }) {
+export default async function HizmetSayfasi(
+  { params }: { params: { slug: string } }
+) {
   const { slug } = params;
   const aciklama = hizmetler[slug as keyof typeof hizmetler];
 
   const baslik =
     hizmetBasliklari[slug] ??
     slug.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+
 
   return (
     <main className="p-8 max-w-3xl mx-auto lg:max-w-full bg-gray-900 rounded-lg shadow-md">
