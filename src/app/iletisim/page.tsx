@@ -11,13 +11,32 @@ export default function Iletisim() {
     <main className="flex flex-col min-h-screen p-6 bg-gray-900 text-gray-100">
       <h1 className="text-3xl font-bold mb-4 text-gray-100">İletişim</h1>
       <p className="mb-4 text-gray-100">
+       Ben Mustafa Taşlıalan Mersin/Silifkede ikametgah ediyorum aslen Gülnarlıyım.Burada sizlere kendimi tanıtacağım.
+
+       
+
+       
         Mustafa Taşlıalan :05065019612
         <br />
         Silifke/Mersin
       </p>
+        <p className="text-gray-200">
+       Github : https://github.com/MustafaTaslialann
+      </p>
+      <p className="text-gray-200">
+        İnstagram: tslln.mustafa
+      </p>
+
+      <p className="text-gray-200">
+        e-mail:mustafataslialan@outlook.com
+      </p>
+      
+      
+      
       <p className="text-gray-100">
         Müşteri memnuniyeti önceliğimizdir.
       </p>
+
     <div className="flex justify-center mt-4">
         <a
           href="tel:+905065019612"

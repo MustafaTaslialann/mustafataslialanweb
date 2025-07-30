@@ -29,7 +29,15 @@ export default function Hakkimizda() {
         iş süreçlerine değer katmayı, yenilikçi teknolojiler üretmeyi
         hedefliyorum. Boş zamanlarımda satranç oynamayı, yeni yerler keşfetmeyi
         severim.
+
+        
       </p>
+    <p className="text-gray-200">
+       Github : https://github.com/MustafaTaslialann
+      </p>
+      <p className="text-gray-200">
+        İnstagram: tslln.mustafa</p>
+      
       <div></div>
       <Link
         href="/"

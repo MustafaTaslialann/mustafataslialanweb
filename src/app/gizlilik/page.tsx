@@ -12,7 +12,7 @@ export default function Gizlilik() {
       <h1 className="text-3xl font-bold mb-4 text-white-200">
         Gizlilik Politikası
       </h1>
-      <p className="mb-4 text-white-200">
+      <p className="text-yellow-200">
     Gizliliğinize önem veriyoruz Bilgileriniz 3.taraf şahıslarıyla paylaşılmamaktadır.
       </p>
       <p className="text-white-200">Tüm hakları saklıdır.</p>

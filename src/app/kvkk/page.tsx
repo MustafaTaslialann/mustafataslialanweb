@@ -13,7 +13,10 @@ export default function KVKK() {
       <p className="mb-4 text-white-200">
    
       </p>
-      <p className="text-yellow-200"></p>
+      <p className="text-yellow-200">
+    Tüm haklarınız saklıdır. Bana ulaştığınızda bilgileriniz ve istekleriniz 3.taraf şahıslarla paylaşılmayacaktır. 
+
+      </p>
 
       <Link
         href="/"
