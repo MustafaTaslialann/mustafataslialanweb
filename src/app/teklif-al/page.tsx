@@ -61,10 +61,6 @@ export default function TeklifAlPage() {
         Şimdi Ara
       </a>
     </form>
-
-   
-
-    
   </main>
 );
 
