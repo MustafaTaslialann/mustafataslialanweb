@@ -10,12 +10,12 @@ export default function Anasayfa() {
   return (
     <main className="flex flex-col min-h-screen bg-gray-900 text-gray-100">
       <section className="flex flex-col items-center justify-center">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">
+        <h1 className="text-2xl md:text-4xl font-bold mb-4 justify-center">
           Mustafa Taşlıalan Web Sitesi
         </h1>
         <p className="text-lg md:text-xl mb-6">
           Mustafa Taşlıalan Web Sitesine hoşgeldiniz burada sizlere kendimi
-          tanıtacağım.
+          tanıtacağım.Bilgisayar Mühendisi olarak Web sitesi hizmetlerinde,Otomasyon hizmetleri,Blog yazarlığı,Oyun geliştirme hizmetleriyle sizlere daha iyi bir hizmet vermek için bu web sitesini oluşturdum.
         </p>
         <Link
           href="/teklif-al"

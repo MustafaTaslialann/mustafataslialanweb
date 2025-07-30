@@ -37,7 +37,16 @@ export default function Hakkimizda() {
       </p>
       <p className="text-gray-200">
         İnstagram: tslln.mustafa</p>
-      
+      <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-100">
+  Özgeçmişim (PDF)
+</h2>
+<iframe
+  src="/mustafa-taslialan-cv.pdf"
+  width="100%"
+  height="800px"
+  className="border-2 border-gray-300 rounded-md"
+/>
+
       <div></div>
       <Link
         href="/"
