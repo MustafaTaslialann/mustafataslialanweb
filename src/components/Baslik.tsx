@@ -17,6 +17,7 @@ export default function Baslik() {
         <Link href="/" className="text-2xl font-bold tracking-wide block">
           Mustafa Taşlıalan Web Sitesi
         </Link>
+         <span className="text-yellow-400 font-semibold">Tek bir kötü hamle kırk iyi hamleyi boşa çıkarır.</span>
       </div>
 
       <nav className="flex flex-wrap gap-4 justify-center text-base font-medium relative">

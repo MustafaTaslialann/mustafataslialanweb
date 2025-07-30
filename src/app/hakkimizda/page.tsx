@@ -32,11 +32,14 @@ export default function Hakkimizda() {
 
         
       </p>
-    <p className="text-gray-200">
+    <p className="text-yellow-100">
        Github : https://github.com/MustafaTaslialann
       </p>
-      <p className="text-gray-200">
+      <p className="text-yellow-100">
         İnstagram: tslln.mustafa</p>
+          <p className="text-yellow-100">
+        e-mail:mustafataslialan@outlook.com
+      </p>
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-100">
   Özgeçmişim (PDF)
 </h2>

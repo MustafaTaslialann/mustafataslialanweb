@@ -15,8 +15,13 @@ export default function Anasayfa() {
         </h1>
         <p className="text-lg md:text-xl mb-6">
           Mustafa Taşlıalan Web Sitesine hoşgeldiniz burada sizlere kendimi
-          tanıtacağım.Bilgisayar Mühendisi olarak Web sitesi hizmetlerinde,Otomasyon hizmetleri,Blog yazarlığı,Oyun geliştirme hizmetleriyle sizlere daha iyi bir hizmet vermek için bu web sitesini oluşturdum.
+          tanıtacağım.Bilgisayar Mühendisi olarak Web sitesi
+          hizmetlerinde,Otomasyon hizmetleri,Blog yazarlığı,Oyun geliştirme
+          hizmetleriyle sizlere daha iyi bir hizmet vermek için bu web sitesini
+          oluşturdum.
         </p>
+        
+        
         <Link
           href="/teklif-al"
           className="bg-[#FFD700] hover:bg-[#FFC107] text-[#0A1D56] font-semibold px-6 py-3 rounded-lg inline-block text-base md:text-lg transition"

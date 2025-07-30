@@ -13,7 +13,7 @@ export default function CustomFooter() {
         <Link href="/iletisim">İletişim</Link>
         <Link href="/kvkk" className="hover:underline">KVKK</Link>
         <Link href="/gizlilik" className="hover:underline">Gizlilik Politikası</Link>
-      
+        <span className="text-yellow-400 font-semibold">Tek bir kötü hamle kırk iyi hamleyi boşa çıkarır.</span>
 
       </div>
      
