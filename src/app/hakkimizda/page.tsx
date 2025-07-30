@@ -43,7 +43,7 @@ export default function Hakkimizda() {
 <iframe
   src="/mustafa-taslialan-cv.pdf"
   width="100%"
-  height="800px"
+  height="900px"
   className="border-2 border-gray-300 rounded-md"
 />
 
