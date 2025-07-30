@@ -18,7 +18,7 @@ export default function Anasayfa() {
           tanıtacağım.Bilgisayar Mühendisi olarak Web sitesi
           hizmetlerinde,Otomasyon hizmetleri,Blog yazarlığı,Oyun geliştirme
           hizmetleriyle sizlere daha iyi bir hizmet vermek için bu web sitesini
-          oluşturdum.
+          oluşturdum.Bilgisayarınıza format hizmetlerindede bana danışabilirsiniz.
         </p>
         
         

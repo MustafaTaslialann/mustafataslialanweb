@@ -15,6 +15,7 @@ export default function KVKK() {
       </p>
       <p className="text-yellow-200">
     Tüm haklarınız saklıdır. Bana ulaştığınızda bilgileriniz ve istekleriniz 3.taraf şahıslarla paylaşılmayacaktır. 
+    Sizde benle beraber çalışarak bana destek olabilirsiniz.
 
       </p>
 
