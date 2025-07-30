@@ -13,28 +13,7 @@ export default function Gizlilik() {
         Gizlilik Politikası
       </h1>
       <p className="mb-4 text-white-200">
-        Beyaz Eşya Servisi olarak, web sitemizi ziyaret eden kullanıcılarımızın
-        gizliliğini önemsiyor ve kişisel verilerinizi 6698 sayılı Kişisel
-        Verilerin Korunması Kanunu (KVKK) başta olmak üzere ilgili mevzuata
-        uygun şekilde işliyoruz. Toplanan Bilgiler Web sitemiz aracılığıyla
-        bizimle paylaştığınız: İsim, soyisim Telefon numarası E-posta adresi
-        Adres ve cihaz bilgileri gibi kişisel verileriniz, yalnızca teknik
-        servis taleplerinizi değerlendirmek ve sizlere daha iyi hizmet sunmak
-        amacıyla işlenir. Verilerin Kullanım Amacı Topladığımız veriler: Servis
-        talebinizi değerlendirmek ve sizinle iletişime geçmek Randevu oluşturmak
-        Hizmet kalitemizi artırmak amaçlarıyla kullanılır. Bu veriler, üçüncü
-        kişilerle asla paylaşılmaz, yalnızca yasal yükümlülükler çerçevesinde
-        resmi makamlarla paylaşılabilir. Çerezler (Cookies) Sitemiz, kullanıcı
-        deneyimini geliştirmek amacıyla çerez (cookie) teknolojisi kullanabilir.
-        Tarayıcınız üzerinden çerez kullanımını kontrol edebilir veya devre dışı
-        bırakabilirsiniz. Güvenlik Kişisel verileriniz, yetkisiz erişim, kayıp
-        veya kötüye kullanıma karşı güvenli sistemler ile korunur. Haklarınız
-        KVKK kapsamında, aşağıdaki haklara sahipsiniz: Kişisel verilerinizin
-        işlenip işlenmediğini öğrenme İşlenmişse buna ilişkin bilgi talep etme
-        Eksik veya yanlış verilerin düzeltilmesini isteme Verilerin silinmesini
-        veya yok edilmesini talep etme İşlemenin sadece yasal zorunluluklar ile
-        sınırlı olmasını isteme Bu haklarınızı kullanmak için bizimle iletişime
-        geçebilirsiniz.
+    Gizliliğinize önem veriyoruz Bilgileriniz 3.taraf şahıslarıyla paylaşılmamaktadır.
       </p>
       <p className="text-white-200">Tüm hakları saklıdır.</p>
 
@@ -44,70 +23,8 @@ export default function Gizlilik() {
       >
         Ana Sayfaya Dön
       </Link>
-      <MusteriYorumlari />
+     
     </main>
   );
 }
-function MusteriYorumlari() {
-  const yorumlar = [
-    {
-      ad: "Ali Y.",
-      yorum: "Çok hızlı ve güvenilir hizmet, memnun kaldım.",
-      puan: 5,
-    },
-    {
-      ad: "Zeynep K.",
-      yorum: "Klimamı tamir ettirdim, fiyat uygundu.",
-      puan: 4,
-    },
-    {
-      ad: "Mustafa A.",
-      yorum: "Buzdolabı tamiri beklediğimden uzun sürdü.",
-      puan: 3,
-    },
-    { ad: "Ayşe M.", yorum: "Teknisyen çok bilgiliydi, teşekkürler.", puan: 5 },
-    {
-      ad: "Fatma D.",
-      yorum: "Servis biraz geç geldi ama sorun çözüldü.",
-      puan: 4,
-    },
-    { ad: "Emre S.", yorum: "Memnun kalmadım, tekrar arıza yaptı.", puan: 2 },
-    { ad: "Canan H.", yorum: "Mükemmel hizmet!", puan: 5 },
-    { ad: "Kerem C.", yorum: "Ortalama bir servis deneyimi yaşadım.", puan: 3 },
-    {
-      ad: "Selin T.",
-      yorum: "Tavsiye ederim, işlerini iyi yapıyorlar.",
-      puan: 5,
-    },
-    { ad: "Burak B.", yorum: "İletişim konusunda eksikleri var.", puan: 3 },
-    { ad: "Cemre Z.", yorum: "Fiyat/performans açısından başarılı.", puan: 4 },
-    { ad: "Tayfun E.", yorum: "Biraz pahalı ama kaliteli hizmet.", puan: 4 },
-    { ad: "Gizem Ş.", yorum: "Sorunum hala devam ediyor.", puan: 2 },
-    {
-      ad: "Yusuf R.",
-      yorum: "Çok memnun kaldım, tekrar tercih ederim.",
-      puan: 5,
-    },
-    { ad: "Derya N.", yorum: "İşlerini titizlikle yaptılar.", puan: 5 },
-    { ad: "Hakan U.", yorum: "Servis geç geldi.", puan: 2 },
-    { ad: "Melis L.", yorum: "Her şey yolundaydı, teşekkürler.", puan: 5 },
-    { ad: "Onur İ.", yorum: "Çözüm odaklı ekip, memnun kaldım.", puan: 4 },
-  ];
 
-  return (
-    <section className="bg-white-200 text-gray-400 px-4 py-8">
-      <h2 className="text-2xl font-bold text-center mb-6">Müşteri Yorumları</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-        {yorumlar.map((item, index) => (
-          <div key={index} className="bg-white text-[#0A1D56] p-4 rounded shadow">
-            <h3 className="font-semibold text-lg">{item.ad}</h3>
-            <p className="italic mb-2">"{item.yorum}"</p>
-            <div className="text-sm text-yellow-500">
-              {"★".repeat(item.puan)}{"☆".repeat(5 - item.puan)}
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-}
